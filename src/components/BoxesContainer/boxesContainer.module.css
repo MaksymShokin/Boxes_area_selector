@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 150px;
+}
+
+.boxesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.resetBtn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  text-align: center;
+  font-size: 16px;
+  width: 80px;
+  margin-bottom: 50px;
+}
