@@ -28,18 +28,18 @@ export const BoxesContainer = ({
       const endRow = Math.floor(index / columns);
       const endCol = index % columns;
 
-      const isHorizontalFlowPositive = startRow <= endRow;
-      const isVerticalFlowPositive = startCol <= endCol;
+      const isRowsFlowPositive = startRow <= endRow;
+      const isColumnsFlowPositive = startCol <= endCol;
 
       for (
         let i = startCol;
-        isVerticalFlowPositive ? i <= endCol : i >= endCol;
-        isVerticalFlowPositive ? i++ : i--
+        isColumnsFlowPositive ? i <= endCol : i >= endCol;
+        isColumnsFlowPositive ? i++ : i--
       ) {
         for (
           let j = startRow;
-          isHorizontalFlowPositive ? j <= endRow : j >= endRow;
-          isHorizontalFlowPositive ? j++ : j--
+          isRowsFlowPositive ? j <= endRow : j >= endRow;
+          isRowsFlowPositive ? j++ : j--
         ) {
           selectedIndexes.add(j * columns + i);
         }
