@@ -7,15 +7,9 @@ interface BoxProps {
   highlight: boolean;
   onMouseEnter: (event: MouseEvent) => void;
   onMouseDown: () => void;
-  onMouseUp: () => void;
 }
 
-export const Box = ({
-  highlight,
-  onMouseDown,
-  onMouseUp,
-  onMouseEnter
-}: BoxProps) => {
+export const Box = ({ highlight, onMouseDown, onMouseEnter }: BoxProps) => {
   return (
     <div
       className={cx(classes.box, {
@@ -23,7 +17,6 @@ export const Box = ({
       })}
       onMouseEnter={onMouseEnter}
       onMouseDown={onMouseDown}
-      onMouseUp={onMouseUp}
     />
   );
 };
